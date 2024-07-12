@@ -14,7 +14,7 @@ jobs:
       - name: Test internet access
         run: curl -f https://www.google.com/
       - name: Ping SonarQube server
-        run: ping -c 3 192.168.1.29
+        run: curl -I http://192.168.1.29:9000/
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
