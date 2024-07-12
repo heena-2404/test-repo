@@ -7,10 +7,12 @@ on:
   workflow_dispatch:
 jobs:
   build:
-    name: Build and analyze
+    name: Test Sonar Scan
     runs-on: ubuntu-latest
     
     steps:
+      - name: Ping SonarQube server
+        run: ping -c 3 http://192.168.1.29:9000
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
