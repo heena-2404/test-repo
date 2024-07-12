@@ -12,7 +12,7 @@ jobs:
     
     steps:
       - name: Test internet access
-        run: curl -f https://google.com
+        run: curl -f https://www.google.com/
       - name: Ping SonarQube server
         run: ping -c 3 192.168.1.29
       - uses: actions/checkout@v4
