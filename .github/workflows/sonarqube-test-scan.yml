@@ -32,7 +32,7 @@ jobs:
       #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       #     SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
       - name: Run SonarCloud Analysis
-        uses: sonarsource/sonarcloud-github-action@2.3.0
+        uses: sonarsource/sonarcloud-github-action@2.3
         with:
           projectKey: ${{ secrets.SONARCLOUD_PROJECT_KEY }} 
           organization: ${{ secrets.SONARCLOUD_ORGANIZATION }}
